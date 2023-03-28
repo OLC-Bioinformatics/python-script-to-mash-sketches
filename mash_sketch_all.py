@@ -1,6 +1,6 @@
 import subprocess
 import glob
-
+##Author: Madhu Mathu.Malar@inspection.gc.ca ##
 mash_path = '/mnt/nas2/virtual_environments/mash/bin/mash'
 output_dir = '/mnt/nas2/redmine/bio_requests/14674/'
 num_processors = 12
