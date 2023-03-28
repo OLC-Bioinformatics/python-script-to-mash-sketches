@@ -9,4 +9,6 @@ were created in 2019.
 This runs on Julie's system where i work everyday at 12 am. if someone wants to modify the cron job it should be done like this
 
 crontab -e ( my fav editor is vi)
+
+
 0 0 * * *  /home/jshay/miniconda3/bin/python /mnt/nas/users/madhu/mash_sketch_all.py >> /mnt/nas/users/madhu/mash.log 2>&1   [ here the env of python is added and the script is included in the crontab shell and save it wq!]
