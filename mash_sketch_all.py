@@ -49,3 +49,59 @@ for i, file_group in enumerate(file_groups1):
     output_path = output_dir + f'part_1_{i}.msh'
     subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
 ########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups2):
+    output_path = output_dir + f'part_2_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups3):
+    output_path = output_dir + f'part_3_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups4):
+    output_path = output_dir + f'part_4_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups5):
+    output_path = output_dir + f'part_5_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups6):
+    output_path = output_dir + f'part_6_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups7):
+    output_path = output_dir + f'part_7_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups8):
+    output_path = output_dir + f'part_8_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups9):
+    output_path = output_dir + f'part_9_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# run the mash sketch command on each group of files
+for i, file_group in enumerate(file_groups10):
+    output_path = output_dir + f'part_10_{i}.msh'
+    subprocess.run([mash_path, 'sketch', '-o', output_path, '-p', str(num_processors)] + file_group, check=True)
+########################################################################################################################
+# concatenate the output files into a single file
+output_files = glob.glob(output_dir + 'part_*.msh')
+with open(output_dir + 'final_sketches.msh', 'wb') as outfile:
+    for filename in output_files:
+        with open(filename, 'rb') as infile:
+            outfile.write(infile.read())
+
+# Remove the individual output files
+#for filename in output_files:
+  subprocess.run(['rm', '-f', filename], check=True)
+
